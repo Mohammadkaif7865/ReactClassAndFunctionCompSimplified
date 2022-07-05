@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import ClassComponent from "./classComponent";
+// import { useState } from "react";
+import React,{Component} from "react";
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      name: "Monu"
+    }        
+  }
+  render() {
+    return (
+      <div className="App">
+        <ClassComponent name={this.state.name}></ClassComponent>
+        <button onClick={()=>{this.setState({name:"sonu"})}}>Change Name</button>
+      </div>
+    )
+  }
 }
+
+// function App() {
+//   const [name,setState] = useState("Monu");
+//   return (
+//     <div className="App">
+//        <ClassComponent name={name}></ClassComponent>
+//        <button onClick={()=>{setState("Sonu")}} >change name</button>
+//     </div>
+//   );
+// }
 
 export default App;
