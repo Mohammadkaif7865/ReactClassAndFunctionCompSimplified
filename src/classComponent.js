@@ -5,7 +5,10 @@ export default class Student extends Component {
         console.log(this.props);//we cannot console directly inside the class component we have define it inside the function of class component
         return(
          <>
-           <div>Student : {this.props.name}</div>
+           <h2>Name : {this.props.name}</h2>
+            <h2>Email : {this.props.email}</h2>
+            <h2>Salary : {this.props.salary}</h2>
+            <h2>Address : {this.props.address}</h2>
          </>
         )
     }
