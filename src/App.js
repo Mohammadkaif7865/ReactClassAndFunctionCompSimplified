@@ -22,12 +22,15 @@ import './App.css';
 // }
 
 function App() {
-  const [name,setState] = useState("Monu");
+  const [name,setName] = useState("abc");
+  const [email,setEmail] = useState("abc@gmail.com");
+  const [state,setState] = useState("None");
+  const [salary,setSalary] = useState("-----");
   return (
     <div className="App">
        {/* <ClassComponent name={name}></ClassComponent> */}
-       <FunctionComponent name={name}></FunctionComponent>
-       <button onClick={()=>{setState("Sonu")}} >change name</button>
+       <FunctionComponent name={name} email={email} state={state} salary={salary}></FunctionComponent>
+       <button onClick={()=>{setName("Monu");setState("Delhi");setSalary("320000");setEmail("monu@gmail.com")}} >Lets see</button>
     </div>
   );
 }
