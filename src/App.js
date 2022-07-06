@@ -1,26 +1,42 @@
 import ClassComponent from "./classComponent";
 // import FunctionComponent from "./functionComponent";
 // import { useState } from "react";
-import React,{Component} from "react";
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
       name: "abc",
       address: "none",
       salary: "------",
-      email: "abc@gmail.com",      
-    }        
+      email: "abc@gmail.com",
+    };
   }
   render() {
     return (
       <div className="App">
-        <ClassComponent name={this.state.name} address={this.state.address} salary={this.state.salary} email={this.state.email} ></ClassComponent>
+        <ClassComponent
+          name={this.state.name}
+          address={this.state.address}
+          salary={this.state.salary}
+          email={this.state.email}
+        ></ClassComponent>
         {/* <FunctionComponent name={this.state.name} address={this.state.address} salary={this.state.salary} email={this.state.email}></FunctionComponent> */}
-        <button onClick={()=>{this.setState({name:"Monu",address:"Delhi",salary:"234554",email:"monu@gmail.com"})}}>Change Name</button>
+        <button
+          onClick={() => {
+            this.setState({
+              name: "Monu",
+              address: "Delhi",
+              salary: "234554",
+              email: "monu@gmail.com",
+            });
+          }}
+        >
+          Change Name
+        </button>
       </div>
-    )
+    );
   }
 }
 
